@@ -4,6 +4,20 @@ import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import bootstrap from './src/main.server';
+import { initializeApp } from "firebase/app";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAaO7QaVVDcSGObDIZM6iNtj23cgTEsBNU",
+  authDomain: "jlwedding-31ecd.firebaseapp.com",
+  projectId: "jlwedding-31ecd",
+  storageBucket: "jlwedding-31ecd.appspot.com",
+  messagingSenderId: "49670722646",
+  appId: "1:49670722646:web:e2776ec7b59a17c7aa97f7"
+};
+
+// Initialize Firebase
+export const firebaseApp = initializeApp(firebaseConfig);
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
