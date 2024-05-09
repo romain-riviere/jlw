@@ -1,7 +1,9 @@
 html {
     height: 100%;
+    width: 100%;
     body {
         height: 100%;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -10,7 +12,7 @@ html {
 
 .wrap {
     margin: auto;
-    height: 310px;
+    height: 3em;
 }
 
 a {
@@ -20,24 +22,37 @@ a {
 
 // Title
 h1 {
-    margin-bottom: 60px;
+    margin-bottom: 6em;
     text-align: center;
     font: 300 2.25em "Lato";
     text-transform: uppercase;
 
     strong {
         font-weight: 400;
-        color: #ff9d52;
+        color: #d6003d;
     }
 }
 
 h2 {
-    margin-bottom: 80px;
+    margin-bottom: 8em;
     text-align: center;
-    font: 300 0.7em "Lato";
+    font: 600 0.7em "Lato";
     text-transform: uppercase;
 
     strong {
-        font-weight: 400;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2em !important;
+        font-weight: 500 !important;
+    }
+}
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 1.5em !important;
     }
 }

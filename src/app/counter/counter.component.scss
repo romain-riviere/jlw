@@ -1,18 +1,22 @@
+:host {
+    z-index: 11;
+}
+
 .countdown {
     display: flex;
-    justify-content: center;
-    width: 720px;
+    justify-content: space-between;
     margin: 0 auto;
 
     .bloc-time {
         float: left;
-        margin-right: 45px;
+        margin-left: 1.3em;
+        margin-right: 1.3em;
         text-align: center;
     }
 
     .count-title {
         display: block;
-        margin-bottom: 15px;
+        margin-bottom: 1em;
         font: normal 0.94em "Lato";
         color: #1a1a1a;
         text-transform: uppercase;
@@ -25,10 +29,11 @@
     .figure {
         position: relative;
         float: left;
-        height: 110px;
-        width: 100px;
-        margin-right: 10px;
-        background-color: #fff;
+        height: 12em;
+        width: 6em;
+        margin-left: 5px;
+        margin-right: 5px;
+        background-color: rgba(255, 255, 255, 0);
         border-radius: 8px;
         box-shadow: box-shadow(0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08));
 
@@ -37,9 +42,9 @@
             left: 0;
             right: 0;
             margin: auto;
-            font: normal 5.94em/107px "Lato";
+            font: normal 6em "Lato";
             font-weight: 700;
-            color: #ff9d52;
+            color: #d6003d;
         }
 
         .top,
@@ -68,7 +73,7 @@
 
         .bottom {
             z-index: 1;
-
+            display: none;
             &:before {
                 content: "";
                 position: absolute;
@@ -109,7 +114,7 @@
         .top-back {
             z-index: 4;
             bottom: 0;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0);
             -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
             transform: transform(perspective(200px) rotateX(180deg));
@@ -123,6 +128,51 @@
                 right: 0;
                 margin: auto;
             }
+        }
+    }
+    @media (max-width: 1200px) {
+        .bloc-time {
+            margin-left: 0.8em;
+            margin-right: 0.8em;
+        }
+
+        .count-title {
+            font: normal 0.94em "Lato";
+        }
+
+        .figure {
+            height: 8em;
+            width: 4em;
+
+            > span {
+                font: normal 4em "Lato";
+                font-weight: 700;
+            }
+        }
+    }
+
+    @media (max-width: 900px) {
+        .bloc-time {
+            margin-left: 0.8em;
+            margin-right: 0.8em;
+        }
+
+        .count-title {
+            font: normal 0.94em "Lato";
+        }
+
+        .figure {
+            height: 6em;
+            width: 2em;
+
+            > span {
+                font: normal 3em "Lato";
+                font-weight: 700;
+            }
+        }
+
+        .sec {
+            display: none;
         }
     }
 }
