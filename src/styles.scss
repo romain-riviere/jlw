@@ -24,23 +24,13 @@ a {
 h1 {
     margin-bottom: 6em;
     text-align: center;
-    font: 300 2.25em "Lato";
+    font-weight: 300;
+    font-size: 2.25em;
     text-transform: uppercase;
 
     strong {
         font-weight: 400;
         color: #d6003d;
-    }
-}
-
-h2 {
-    margin-bottom: 8em;
-    text-align: center;
-    font: 600 0.7em "Lato";
-    text-transform: uppercase;
-
-    strong {
-        font-weight: 700;
     }
 }
 
